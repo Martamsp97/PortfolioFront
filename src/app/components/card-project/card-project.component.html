@@ -1,0 +1,35 @@
+@if (fullstack) {
+<div class="card">
+    <div class="card-foto">
+        <figure>
+            <img [src]="fullstack.fotoCard" alt="">
+        </figure>
+    </div>
+    <div class="card-texto">
+        <h3>{{fullstack.title}}</h3>
+        <p>{{fullstack.description}}</p>
+        <div class="button">
+            <button [routerLink]="['fullstack', fullstack._id]">¡Quiero ver más!</button>
+        </div>
+    </div>
+</div>
+
+}
+
+@if (uxui) {
+<div class="card">
+    <div class="card-foto">
+        <figure>
+            <img [src]="uxui.fotoCard" alt="">
+        </figure>
+    </div>
+    <div class="card-texto">
+        <h3>{{uxui.title}}</h3>
+        <p>{{uxui.description}}</p>
+        <div class="button">
+            <button [routerLink]="['uxui', uxui._id]">¡Quiero ver más!</button>
+        </div>
+    </div>
+</div>
+
+}

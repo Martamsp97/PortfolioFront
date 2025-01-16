@@ -1,0 +1,40 @@
+.card {
+
+    width: 50%;
+    margin-bottom: 6rem;
+    gap: 0.5rem;
+
+
+    figure {
+        width: 95%;
+    }
+
+    .card-texto {
+        width: 95%;
+
+        h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            line-height: 3rem;
+            margin-top: 2rem;
+
+        }
+
+        p {
+            font-family: var(--fuente-texto-medium);
+            font-size: 1.1rem;
+            margin-top: 1.2rem;
+            margin-bottom: 1.4rem;
+
+        }
+
+
+    }
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15rem 16rem;
+}

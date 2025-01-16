@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+
+@font-face {
+    font-family: 'Boska-Regular';
+    src: url('../public/fonts/Boska/Boska-Regular.woff2') format('woff2'),
+        url('../public/fonts/Boska/Boska-Regular.woff') format('woff'),
+        url('../public/fonts/Boska/Boska-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boska-Medium';
+    src: url('../public/fonts/Boska/Boska-Medium.woff2') format('woff2'),
+        url('../public/fonts/Boska/Boska-Medium.woff') format('woff'),
+        url('../public/fonts/Boska/Boska-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../public/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2'),
+        url('../public/fonts/Satoshi/Satoshi-Regular.woff') format('woff'),
+        url('../public/fonts/Satoshi/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('../public/fonts/Satoshi/Satoshi-Medium.woff2') format('woff2'),
+        url('../public/fonts/Satoshi/Satoshi-Medium.woff') format('woff'),
+        url('../public/fonts/Satoshi/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../public/fonts/Satoshi/Satoshi-Bold.woff2') format('woff2'),
+        url('../public/fonts/Satoshi/Satoshi-Bold.woff') format('woff'),
+        url('../public/fonts/Satoshi/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Talisman';
+
+    src: url('../public/fonts/Outward/talisman.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 18, 33);
+}
+
+:root {
+    --color-oscuro: #220223;
+    --color-blanco: #E6e6e5;
+    --fuente-titulos: 'Talisman', sans-serif;
+    --fuente-subtitulos-regular: 'Boska-Regular', sans-serif;
+    --fuente-subtitulos-medium: 'Boska-Medium', sans-serif;
+    --fuente-texto-regular: 'Satoshi-Regular', sans-serif;
+    --fuente-texto-medium: 'Satoshi-Medium', sans-serif;
+    --fuente-texto-bold: 'Satoshi-Bold', sans-serif;
+}
+
+
+
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.container {
+    background-color: rgb(24, 18, 33);
+    color: var(--color-blanco);
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    --animation-duration: 1s;
+    --animation-delay: 0.2s;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li {
+    opacity: 0;
+
+
+    animation: fadeInUp var(--animation-duration) ease-out var(--animation-delay) forwards;
+}
+
+.presentacion {
+    --animation-delay: 3s;
+}

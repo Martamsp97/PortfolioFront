@@ -1,0 +1,45 @@
+<div class="container"></div>
+<div class="contenedor">
+    @if (Fullstack) {
+    <h2>{{Fullstack.title}}</h2>
+    <div class="entrada">
+        <article>
+            <h3>OBJETIVO</h3>
+            <p>{{Fullstack.objetive}}</p>
+        </article>
+        <article>
+            <h3>CÓMO SE CONSIGUIÓ</h3>
+            <p>{{Fullstack.how}}</p>
+        </article>
+        <article>
+            <h3>PÚBLICO OBJETIVO</h3>
+            <p>{{Fullstack.target}}</p>
+        </article>
+    </div>
+    <div class="flujo">
+        <h3>Flujo del proyecto:</h3>
+        <div class="imagenes">
+            @for (fotos of Fullstack.flujo; track $index) {
+            <figure>
+                <img [src]="fotos">
+            </figure>
+            }
+        </div>
+    </div>
+    <div class="tecnologias">
+        <h3>Tecnologías utilizadas:</h3>
+        <div class="text-container">
+            <div class="scrolling-text ">
+                <p>{{Fullstack.tools}} {{Fullstack.tools}} {{Fullstack.tools}} {{Fullstack.tools}}</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="enlace">
+        <div class="enlace-2"><a [href]="Fullstack.url">
+                <p>PROYECTO</p>
+                <p>COMPLETO <i class="fa-solid fa-angles-right"></i></p>
+            </a></div>
+    </div>
+
+    }

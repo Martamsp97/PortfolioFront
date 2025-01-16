@@ -1,0 +1,136 @@
+.contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15rem 2rem;
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 10rem;
+    text-align: center;
+}
+
+.entrada {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    font-family: var(--fuente-texto-medium);
+
+    article {
+        padding: 3rem;
+        border: 1px solid var(--color-blanco);
+        border-radius: 30px;
+
+        h3 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+
+        }
+
+    }
+}
+
+.flujo {
+    text-align: center;
+    width: 100%;
+
+    h3 {
+        font-family: var(--fuente-titulos);
+        font-size: 4rem;
+        margin-top: 10rem;
+    }
+}
+
+.userStudy {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    p {
+        margin-top: 2rem;
+        font-family: var(--fuente-texto-medium);
+        font-size: 1.2rem;
+        text-align: left;
+    }
+}
+
+
+figure {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.tecnologias {
+    h3 {
+        font-family: var(--fuente-titulos);
+        font-size: 4rem;
+        margin-top: 10rem;
+    }
+
+
+}
+
+.text-container {
+    font-family: var(--fuente-texto-medium);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-blanco);
+    border-radius: 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+
+.scrolling-text {
+    white-space: nowrap;
+
+    display: inline-block;
+    animation: none;
+
+    transition: transform 0.6s ease;
+}
+
+
+.text-container:hover .scrolling-text {
+    animation: scroll-left 20s linear infinite;
+}
+
+.enlace {
+    width: 100%;
+    align-content: right;
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+    margin-top: 8rem;
+}
+
+
+a {
+    display: block;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-family: var(--fuente-texto-medium);
+    font-size: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    transform: translateX(20px) scale(1.1);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

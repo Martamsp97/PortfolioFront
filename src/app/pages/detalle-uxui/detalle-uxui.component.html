@@ -1,0 +1,63 @@
+<div class="container"></div>
+
+<div class="contenedor">
+    @if (uxui) {
+    <h2>{{uxui.title}}</h2>
+    <div class="entrada">
+        <article>
+            <h3>OBJETIVO</h3>
+            <p>{{uxui.objetive}}</p>
+        </article>
+        <article>
+            <h3>CÓMO SE CONSIGUIÓ</h3>
+            <p>{{uxui.how}}</p>
+        </article>
+        <article>
+            <h3>PÚBLICO OBJETIVO</h3>
+            <p>{{uxui.target}}</p>
+        </article>
+    </div>
+    <div class="flujo">
+        <h3>Análisis del ususario:</h3>
+        <div class="imagenes">
+
+            <div class="userStudy">
+                <p>{{uxui.userStudy[0]}}</p>
+                <figure>
+                    <img [src]="uxui.userStudy[1]">
+                </figure>
+            </div>
+            <div class="userStudy">
+                <p>{{uxui.userStudy[2]}}</p>
+                <figure>
+                    <img [src]="uxui.userStudy[3]">
+                </figure>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="tecnologias">
+        <h3>Tecnologías utilizadas:</h3>
+        <div class="text-container">
+            <div class="scrolling-text ">
+                <p>{{uxui.tools}} {{uxui.tools}} {{uxui.tools}} {{uxui.tools}}</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="mockups">
+        @for (img of uxui.images; track $index) {
+        <figure>
+            <img [src]="img" alt="">
+        </figure>
+        }
+    </div>
+    <div class="enlace">
+        <div class="enlace-2"><a [href]="uxui.url">
+                <p>PROYECTO</p>
+                <p>COMPLETO <i class="fa-solid fa-angles-right"></i></p>
+            </a></div>
+    </div>
+
+    }

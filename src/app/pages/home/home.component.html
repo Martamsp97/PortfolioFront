@@ -1,0 +1,150 @@
+<section class="hero">
+    <article class="name animated">
+        <h5>Digital</h5>
+        <h1>
+            <p>DISEÑO<span>&</span></p>
+            <p>DESARROLLO</p>
+        </h1>
+    </article>
+    <article class="intro animated">
+        <p>
+            Diseñadora gráfica, UX/UI y Fullstack developer. Vivid Minimalism, Futurismo y Frasbourne. Creo
+            experiencias
+            digitales claras
+            y con carácter. Me gustan el arte, el mar, los perretes y los gatos.
+        </p>
+    </article>
+</section>
+<section class="presentacion">
+    <div class="presentacion-izq" animated>
+        <h2>¡HOLA! SOY MARTA</h2>
+        <h5>Marta Sánchez, aunque yo no canto, yo...</h5>
+        <p>Diseño soluciones digitales que combinan usabilidad, funcionalidad y experiencia de usuario. Me encanta
+            moverme entre el frontend y el backend, aprendiendo con cada proyecto y buscando siempre nuevas formas de
+            mejorar. Curiosa por naturaleza, intento convertir ideas en
+            experiencias auténticas
+            que conecten con las personas.</p>
+    </div>
+    <div class="presentacion-dcha animated">
+        <figure>
+            <img src="/imagenes/molona.png" alt="">
+        </figure>
+    </div>
+    <div class="circulo"></div>
+</section>
+<section class="proyectos" id="proyectos">
+    <h2>PROYECTOS</h2>
+
+    <div class="contenedor-proyectos">
+        @for (fullstack of arrProyFullstack; track $index) {
+        <article>
+            <app-card-project [fullstack]="fullstack"></app-card-project>
+        </article>
+        }
+    </div>
+    <div class="contenedor-proyectosuxui">
+        @for (uxui of arrProyUxUi; track $index) {
+        <article>
+            <app-card-project [uxui]="uxui"></app-card-project>
+        </article>}
+    </div>
+    <div class="contenedor-ilustracion">
+        @if (ilustracion) {
+        <div class="card">
+            <div class="card-foto">
+                <figure>
+                    <img [src]="ilustracion.imagen" alt="">
+                </figure>
+            </div>
+            <div class="card-texto">
+                <h3>{{ilustracion.title}}</h3>
+                <p>{{ilustracion.subtitle}}</p>
+                <div class="button">
+                    <button [routerLink]="['ilus']">¡Quiero ver más!</button>
+                </div>
+            </div>
+        </div>
+
+        }
+    </div>
+    <div class="contenedor-foto">
+        @if (foto) {
+        <div class="card">
+            <div class="card-foto">
+                <figure>
+                    <img [src]="foto.imagen" alt="">
+                </figure>
+            </div>
+            <div class="card-texto">
+                <h3>{{foto.title}}</h3>
+                <p>{{foto.subtitle}}</p>
+                <div class="button">
+                    <button [routerLink]="['fotos']">¡Quiero ver más!</button>
+                </div>
+            </div>
+        </div>
+
+        }
+    </div>
+</section>
+<section class="experiencia" id="about">
+    <hgroup>
+        <h2>EXPERIENCIAS LABORALES</h2>
+        <h5>¿A qué me he dedicado estos años?</h5>
+    </hgroup>
+    <div class="experiencias-container">
+        @for (experiencia of arrExperiencias; track $index) {
+        <article class="card-experiencia">
+            <h3>{{experiencia.title}}</h3>
+            <h4>{{experiencia.enterprise}}</h4>
+            <h6>{{experiencia.tools}}</h6>
+            <div class="description">
+                <p>{{experiencia.description}}</p>
+            </div>
+        </article>
+        }
+        <hr>
+    </div>
+</section>
+<section class="estudios">
+    <article class="titles">
+        <h2>MIS ESTUDIOS</h2>
+        <h5>¿Dónde me he formado?</h5>
+    </article>
+    <article class="info">
+        <h3>TÍTULO</h3>
+        <h3>ESCUELA</h3>
+        @for (estudio of arrEstudios; track $index) {
+        <p>{{estudio.title}}</p>
+        <p>{{estudio.school}}</p>
+        }
+    </article>
+</section>
+<section class="contacto" id="contacto">
+    <div class="contacto-izq">
+        <h2>¿TIENES ALGÚN PROYECTO ENTRE MANOS?</h2>
+
+    </div>
+    <div class="contacto-dcha">
+        <h5>Puedes contactar conmigo si el plan incluye:</h5>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>ANGULAR</li>
+            <li>JAVASCRIPT</li>
+            <li>NODEJS</li>
+            <li>EXPRESSJS</li>
+            <li>MYSQL</li>
+            <li>MONGODB</li>
+            <li>ILLUSTRATOR</li>
+            <li>PHOTOSHOP</li>
+            <li>INDESIGN</li>
+            <li>LIGHTROOM</li>
+            <li>PREMIERE</li>
+            <li>FIGMA</li>
+            <li>MAR</li>
+            <li>ANIMALES</li>
+        </ul>
+    </div>
+</section>
+<div class="background1" id="background1"></div>
