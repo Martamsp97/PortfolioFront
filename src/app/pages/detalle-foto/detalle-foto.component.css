@@ -38,3 +38,31 @@
     margin: 0 auto;
     padding: 15rem 16rem;
 }
+
+@media (min-width:800px)and (max-width: 1050px) {
+    .fotos {
+        padding: 15rem 6rem;
+    }
+}
+
+@media (min-width:550px)and (max-width: 799px) {
+    .fotos {
+        padding: 15rem 6rem;
+    }
+
+    .card {
+
+        width: 100%;
+    }
+}
+
+@media (min-width:200px)and (max-width: 549px) {
+    .fotos {
+        padding: 15rem 2rem;
+    }
+
+    .card {
+
+        width: 100%;
+    }
+}

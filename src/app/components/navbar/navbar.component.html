@@ -9,8 +9,14 @@
             </h4>
         </div>
         <div class="dcha">
+
             <nav>
-                <ul>
+                <div class="hamb">
+                    <button (click)="menuBurg()" class="hamburger">
+                        <p>☰</p>
+                    </button>
+                </div>
+                <ul [class.open]="isOpen" class="menu">
                     <li><a href="#proyectos">proyectos,</a></li>
                     <li> <a href="#about">sobre mí,</a></li>
                     <li><a href="#contacto">contacto</a></li>

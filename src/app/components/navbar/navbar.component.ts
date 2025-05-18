@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  isOpen = false;
+  menuBurg() {
+    this.isOpen = !this.isOpen;
+  }
 }

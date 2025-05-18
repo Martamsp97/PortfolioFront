@@ -62,7 +62,8 @@ span {
 
         }
 
-        img:hover {
+        img:hover,
+        img:active {
             transform: scale(1.05);
             opacity: 1;
 
@@ -73,8 +74,8 @@ span {
 }
 
 .circulo {
-    width: 750px;
-    height: 750px;
+    width: 46.875rem;
+    height: 46.875rem;
     border-radius: 50%;
     border: 1px solid var(--color-blanco);
     right: -120px;
@@ -85,7 +86,8 @@ span {
 
 }
 
-.circulo:hover {
+.circulo:hover,
+.circulo:active {
     transform: scale(1.1);
 }
 
@@ -113,6 +115,7 @@ span {
     }
 }
 
+/* ------------------SECCION PROYECTOS---------------------- */
 .proyectos {
     margin: 16rem 10rem;
 
@@ -133,13 +136,31 @@ span {
         margin-left: 10rem;
     }
 
+    .card-foto {
+        width: 100%;
+    }
+
     .card {
         display: grid;
         grid-template-columns: 4fr 3fr;
         width: 85%;
         margin-bottom: 6rem;
         gap: 2rem;
+        position: relative;
 
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            transform-origin: center center;
+            overflow: hidden;
+        }
+
+        img {
+            transition: transform 0.3s ease-in-out;
+        }
 
         .card-texto {
             h3 {
@@ -175,7 +196,8 @@ span {
                 cursor: pointer;
             }
 
-            button:hover {
+            button:hover,
+            button:active {
 
                 transform: translateX(20px) scale(1.1);
             }
@@ -183,6 +205,17 @@ span {
     }
 }
 
+.card:hover {
+    figure {
+        transform: scale(0.9);
+    }
+
+    img {
+        transform: scale(1.2);
+    }
+}
+
+/* ------------------SECCION EXPERIENCIA---------------------- */
 .experiencia {
     margin: 12rem 10rem;
     position: relative;
@@ -280,7 +313,8 @@ span {
 
         }
 
-        article:hover {
+        article:hover,
+        article:active {
             .description {
                 display: block;
             }
@@ -290,6 +324,7 @@ span {
 
 }
 
+/* ------------------SECCION ESTUDIOS---------------------- */
 .estudios {
     margin: 12rem 10rem;
     display: grid;
@@ -324,6 +359,7 @@ span {
     }
 }
 
+/* ------------------SECCION CONTACTO---------------------- */
 .contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -386,4 +422,686 @@ span {
     transition: opacity 0.01s ease-in-out;
 
     background-color: var(--color-oscuro);
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+    /* ------------------SECCION HERO---------------------- */
+    h1 {
+
+        font-size: 8rem;
+
+
+    }
+
+    span {
+
+        font-size: 1rem;
+
+    }
+
+    .intro {
+        p {
+            font-family: var(--fuente-texto-medium);
+            font-size: 1.6rem;
+            margin-left: 2rem;
+
+            width: 90%;
+
+        }
+    }
+
+    /* ------------------SECCION PRESENTACION---------------------- */
+    .presentacion {
+        margin: 12rem 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .presentacion-dcha {
+
+        margin-left: 2rem;
+
+        figure {
+            width: 90%;
+            z-index: 1;
+
+
+            img {
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                z-index: 1;
+
+            }
+
+            img:hover,
+            img:active {
+                transform: scale(1.05);
+                opacity: 1;
+
+            }
+        }
+
+
+    }
+
+    .circulo {
+        width: 37.5rem;
+        height: 37.5rem;
+    }
+
+    .presentacion-izq {
+        h2 {
+            font-size: 4rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        p {
+
+            font-size: 1.1rem;
+            width: 90%;
+        }
+    }
+
+    /* ------------------SECCION PROYECTOS---------------------- */
+    .proyectos {
+        margin: 16rem 5rem;
+
+        .contenedor-proyectos {
+            article:last-child {
+                margin-left: 8rem;
+            }
+        }
+
+        .contenedor-ilustracion {
+            margin-left: 8rem;
+        }
+
+        .card {
+
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+        }
+    }
+
+    /* ------------------SECCION EXPERIENCIA---------------------- */
+    .experiencia {
+        margin: 12rem 8rem;
+
+        &:hover hr {
+            transform: translate(-50%, 0) scaleX(1);
+            /* Expande la línea */
+        }
+
+        hgroup {
+            width: 80%;
+        }
+
+        .experiencias-container {
+
+            gap: 2rem;
+        }
+
+    }
+
+    /* ------------------SECCION ESTUDIOS---------------------- */
+    .estudios {
+        margin: 12rem 8rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8rem;
+
+
+    }
+
+    .info {
+        font-family: var(--fuente-texto-medium);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+    }
+
+    /* ------------------SECCION CONTACTO---------------------- */
+    .contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 17rem 8rem 5rem 8rem;
+
+        .contacto-izq {
+            h2 {
+                font-family: var(--fuente-titulos);
+                font-size: 6rem;
+                margin-top: 2rem;
+                line-height: 5.8rem;
+
+
+
+            }
+
+        }
+
+        .contacto-dcha {
+
+
+            h5 {
+                font-size: 1.4rem;
+
+            }
+
+            ul {
+
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width:700px)and (max-width: 900px) {
+
+    /* ------------------SECCION HERO---------------------- */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    h1 {
+        font-size: 9rem;
+        line-height: 5rem;
+
+    }
+
+    span {
+
+        font-size: 1.3rem;
+
+    }
+
+    .intro {
+        margin-top: 6rem;
+
+        p {
+            font-family: var(--fuente-texto-medium);
+            font-size: 1.5rem;
+            margin-left: 18rem;
+
+            width: 60%;
+
+        }
+    }
+
+    /* ------------------SECCION PRESENTACION---------------------- */
+    .presentacion {
+        margin: 12rem 6rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .presentacion-dcha {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        width: 100%;
+        margin-left: 20%;
+
+        figure {
+            width: 65%;
+            z-index: 1;
+
+
+            img {
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                z-index: 1;
+
+            }
+
+            img:hover,
+            img:active {
+                transform: scale(1.05);
+                opacity: 1;
+
+            }
+        }
+
+
+    }
+
+    .circulo {
+        top: 80rem;
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .presentacion-izq {
+        width: 100%;
+
+        h2 {
+            font-size: 7rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        p {
+
+            font-size: 1.4rem;
+            width: 100%;
+        }
+    }
+
+    /* ------------------SECCION PROYECTOS---------------------- */
+    .proyectos {
+        margin: 16rem 5rem;
+
+        .contenedor-proyectos {
+            article:last-child {
+                margin-left: 0rem;
+            }
+        }
+
+        .contenedor-proyectos {
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+
+
+        .contenedor-ilustracion {
+            margin-left: 0rem;
+            width: 100%;
+        }
+
+        .card {
+            grid-template-columns: 1fr;
+            width: 100%;
+            padding: 5rem;
+
+            figure {
+                border-radius: 20px;
+
+            }
+        }
+    }
+
+    /* ------------------SECCION EXPERIENCIA---------------------- */
+    .experiencia {
+        margin: 8rem 10rem;
+        position: relative;
+
+
+
+        hr {
+
+            left: -20%;
+
+            top: 17%;
+            transform: translate(0, 50%) scaleX(0);
+            rotate: 90deg;
+
+
+            transform-origin: top;
+
+
+        }
+
+        &:hover hr {
+            transform: translate(50%, 0) scaleX(1);
+            /* Expande la línea */
+        }
+
+        hgroup {
+            width: 100%;
+        }
+
+        h2 {
+
+            font-size: 7rem;
+            margin-top: 0rem;
+            width: 100%;
+            line-height: 5.5rem;
+
+
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+
+        }
+
+        .experiencias-container {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            width: 100%;
+            text-align: center;
+            padding: 80px;
+        }
+
+
+
+    }
+
+}
+
+/* ------------------SECCION ESTUDIOS---------------------- */
+.estudios {
+
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+
+}
+
+.titles {
+    h5 {
+        text-align: right;
+    }
+}
+
+/* ------------------SECCION CONTACTO---------------------- */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+    .contacto-izq {
+        h2 {
+
+            width: 100%;
+
+        }
+
+    }
+
+    .contacto-dcha {
+
+
+        h5 {
+            font-size: 1.4rem;
+
+        }
+
+        ul {
+
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@media (min-width:200px)and (max-width: 699px) {
+
+    /* ------------------SECCION HERO---------------------- */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2rem;
+        margin-top: 10rem;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+        line-height: 3rem;
+        margin-top: 1rem;
+    }
+
+    span {
+
+        font-size: 1.3rem;
+
+    }
+
+    .intro {
+        margin-top: 6rem;
+
+        p {
+
+            font-size: 1.5rem;
+            margin-left: 0rem;
+
+            width: 100%;
+
+        }
+    }
+
+    /* ------------------SECCION PRESENTACION---------------------- */
+    .presentacion {
+        margin: 2rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .presentacion-dcha {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        width: 100%;
+        margin-left: 0%;
+
+        figure {
+            width: 100%;
+            z-index: 1;
+
+
+            img {
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                z-index: 1;
+
+            }
+
+            img:hover,
+            img:active {
+                transform: scale(1.05);
+                opacity: 1;
+
+            }
+        }
+
+
+    }
+
+    .circulo {
+        top: 65rem;
+        width: 30rem;
+        height: 30rem;
+
+    }
+
+    .presentacion-izq {
+        width: 100%;
+
+        h2 {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+
+        h5 {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+
+        p {
+
+            font-size: 1.1rem;
+            width: 100%;
+        }
+    }
+
+    /* ------------------SECCION PROYECTOS---------------------- */
+    .proyectos {
+        margin: 10rem 2rem;
+
+        h2 {
+            font-size: 5rem;
+        }
+
+        .contenedor-proyectos {
+            article:last-child {
+                margin-left: 0rem;
+            }
+        }
+
+        .contenedor-proyectos {
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+
+
+        .contenedor-ilustracion {
+            margin-left: 0rem;
+            width: 100%;
+        }
+
+        .card {
+            grid-template-columns: 1fr;
+            width: 100%;
+            padding: 0rem;
+
+            figure {
+                border-radius: 20px;
+
+            }
+        }
+    }
+
+    /* ------------------SECCION EXPERIENCIA---------------------- */
+    .experiencia {
+        margin: 8rem 2rem;
+        position: relative;
+
+
+
+        hr {
+
+            left: -10%;
+
+            top: 17%;
+            transform: translate(0, 50%) scaleX(0);
+            rotate: 90deg;
+
+            display: none;
+            transform-origin: top;
+
+
+        }
+
+        &:hover hr {
+            transform: translate(50%, 0) scaleX(2);
+            /* Expande la línea */
+        }
+
+        hgroup {
+            width: 100%;
+        }
+
+        h2 {
+
+            font-size: 5rem;
+            margin-top: 0rem;
+            width: 100%;
+            line-height: 5.5rem;
+
+
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+
+        }
+
+        .experiencias-container {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+
+    }
+
+    /* ------------------SECCION ESTUDIOS---------------------- */
+    .estudios {
+        margin: 8rem 2rem;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+
+        .titles {
+            h5 {
+                text-align: right;
+            }
+
+            h2 {
+                line-height: 4.5rem;
+                font-size: 5rem;
+            }
+        }
+
+
+    }
+
+
+
+    /* ------------------SECCION CONTACTO---------------------- */
+    .contacto {
+        margin: 8rem 2rem;
+        grid-template-columns: 1fr;
+
+        display: grid;
+
+        .contacto-izq {
+            h2 {
+                font-size: 5rem;
+                line-height: 5rem;
+                width: 100%;
+
+            }
+
+        }
+
+        .contacto-dcha {
+
+
+            h5 {
+                font-size: 1.4rem;
+
+            }
+
+            ul {
+
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: 1201px) {
+    .contacto {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        margin: 17rem 10rem 5rem 10rem !important;
+    }
 }

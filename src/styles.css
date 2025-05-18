@@ -85,7 +85,13 @@ body {
     --fuente-texto-bold: 'Satoshi-Bold', sans-serif;
 }
 
-
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 img {
     width: 100%;
@@ -100,6 +106,7 @@ img {
     height: 100vh;
     width: 100%;
     position: fixed;
+    max-width: 1600px;
 
 }
 
@@ -137,4 +144,12 @@ li {
 
 .presentacion {
     --animation-delay: 3s;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        ;
+        min-width: 901;
+    }
 }

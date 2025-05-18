@@ -13,6 +13,7 @@ footer {
         width: 100%;
         justify-content: center;
 
+
         a {
             text-decoration: none;
             color: var(--color-blanco);
@@ -33,5 +34,16 @@ footer {
         width: 100%;
         font-family: var(--fuente-texto-regular);
         text-align: center;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+    footer {
+        padding: 2rem 4rem 1rem 4rem;
+        margin: 0 2rem;
+
+        .rrss {
+            flex-wrap: wrap;
+        }
     }
 }
